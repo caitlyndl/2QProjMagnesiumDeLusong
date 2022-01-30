@@ -5,7 +5,8 @@
 
 .home {
     background-color:aliceblue;
-    height: 450px;
+    height: 90%;
+    width: 75%;
     border-radius: 20px;
     margin: 10px;
 }
@@ -22,26 +23,12 @@
     padding: 20px;
 }
 
-#notes {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    left: 150px;
-    padding: 20px;
-}
-
-#desk {
-    width: 200px;
-    height: 200px;
-    padding: 20px;
-}
-
-#laptop {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    right: 150px;
-    padding: 20px;
+.pictures img {
+    width: 18%;
+    height: 18%;
+    padding: 10px;
+    display: inline-block;
+    margin-left: 100px;
 }
 
 .border {
@@ -91,7 +78,7 @@ nav {
     height: 10px;
 }
 
-header nav ul {
+ul {
     list-style: none;
     padding: 0 10px;
     top: 200px;
@@ -117,79 +104,149 @@ section {
     padding: 20px 20px 20px 20px;
 }
 
-.rest {
-    background-color: aliceblue;
-    width: 25%;
-    height: 100px;
-    overflow: hidden;
-    overflow-y: scroll;
-    margin: 10px 20px;
+aside {
+    height: 300px;
+    width: 15%;
+    margin: 10px;
     border-radius: 20px;
-    padding: 20px;
+    position: absolute;
+    top: 150px;
+    right: 10px;
+    padding: 15px;
+    margin: 15px;
+    font-style: monospace;
+    background-color: rgb(255, 238, 249);
 }
 
-.reqs {
-    background-color: aliceblue;
-    width: 45%;
-    height: 100px;
-    overflow: hidden;
-    overflow-y: scroll;
-    border-radius: 20px;
-    padding: 20px;
-    margin: 10px 20px;
-    position: absolute;
-    right: 20px;
-    top: 154px;
+aside ul li {
+    font-family: monospace;
+    text-align: center;
+    text-indent: 60px;
+    font-size: 12px;
+    padding: 5px;
 }
+
+aside h2 {
+    padding: 0px;
+    text-align: center;
+    text-indent: 0px;
+}
+
+.disc  {
+    background: url('../images/sprites.png') -59px -223px;
+    width: 50px;
+    height: 50px;
+}
+
+.fb {
+    background: url('../images/sprites.png') no-repeat -224px -223px;
+    width: 49px;
+    height: 49px;
+}
+
+.yt {
+    background: url('../images/sprites.png') no-repeat -389px -223px;
+    width: 50px;
+    height: 50px;
+}
+
+.disc:hover  {
+    background-color: white;
+    width: 55px;
+    height: 56px;
+}
+
+.fb:hover  {
+    background-color: white;
+    width: 55px;
+    height: 56px;
+}
+
+.yt:hover  {
+    background-color: white;
+    width: 55px;
+    height: 56px;
+}
+
+.rotate {
+    animation: rotation 8s infinite linear;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 80px;
+    bottom: 5px;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 .setup {
     background-color: aliceblue;
-    width: 35%;
-    height: 100px;
-    overflow: hidden;
-    overflow-y: scroll;
+    width: 20%;
+    height: 20%;
     margin: 10px 20px;
     border-radius: 20px;
     padding: 20px;
-}
-
-.music {
-    background-color: aliceblue;
-    width: 35%;
-    height: 100px;
-    overflow: hidden;
-    overflow-y: scroll;
-    margin: 10px 20px;
-    position: absolute;
-    right: 20px;
-    top: 304px;
-    border-radius: 20px;
-    padding: 20px;
+    float: left;
 }
 
 .lists {
     background-color: aliceblue;
-    width: 45%;
-    height: 100px;
-    overflow: hidden;
-    overflow-y: scroll;
+    width: 20%;
+    height: 20%;
     margin: 10px 20px;
     border-radius: 20px;
     padding: 20px;
+    float: left;
+}
+
+.music {
+    background-color: aliceblue;
+    width: 20%;
+    height: 20%;
+    margin: 10px 20px;
+    border-radius: 20px;
+    padding: 20px;
+    float: left;
+}
+
+
+.rest {
+    background-color: aliceblue;
+    width: 20%;
+    height: 20%;
+    margin: 10px 20px;
+    border-radius: 20px;
+    padding: 20px;
+    float: left;
+}
+
+.reqs {
+    background-color: aliceblue;
+    width: 20%;
+    height: 20%;
+    margin: 10px 20px;
+    border-radius: 20px;
+    padding: 20px;
+    float: left;
 }
 
 .sleep {
     background-color: aliceblue;
-    width: 25%;
-    height: 100px;
-    overflow: hidden;
-    overflow-y: scroll;
+    width: 20%;
+    height: 20%;
     margin: 10px 20px;
-    position: absolute;
-    right: 20px;
-    top: 454px;
     border-radius: 20px;
     padding: 20px;
+    float: left;
 }
 
 .video {
@@ -202,12 +259,22 @@ video {
     border-radius: 20px;
 }
 
+.icon img {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 200px;
+    left: 15px;
+    transform: rotate(13deg);
+}
 
 footer {
     background-color: lavender;
     width: 100%;
     height: 60px;
-    bottom: 0px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 
 footer h3 {
